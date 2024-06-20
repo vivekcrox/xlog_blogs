@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.appbar {
+    background-color: #070F2B;
+}
+
+/* Custom styles for the footer */
+.footer {
+    position: static; /* Change to fixed if you want it fixed to viewport */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 1rem 0;
+    text-align: center;
+    z-index: 999; /* Ensure it's above other content */
+}
+
+.footer a {
+    color: #3182ce;
+    text-decoration: none;
+    padding: 0 0.5rem;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Ensure main content pushes footer to the bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Use min-height to ensure footer is at bottom */
+    margin: 0; /* Remove default margin to prevent extra space */
+}
+
+.flex-grow {
+    flex-grow: 1; /* Allow main content to grow and push footer */
+    /* padding: 1rem; Example padding for content separation */
+}
